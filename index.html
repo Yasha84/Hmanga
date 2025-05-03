@@ -72,348 +72,430 @@
   <h1>まとめサイト</h1>
 
   <label for="dropdown">並び替え:</label>
-  <select id="dropdown">
-    <option value="default">デフォルト</option>
-    <option value="name">作品名順</option>
-    <option value="auther">作者名順</option>
-  </select>
+  <select id="dropdown"></select>
+
+
+  <label for="search">タグ検索</label>
+  <select id="search"></select>
+
 
   <div id="box" class="comics"></div>
 
-
   <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownSelect = document.getElementById("dropdown");
+
+      const sortOptions = [
+        { value: "default", text: "デフォルト" },
+        { value: "name", text: "作品名順" },
+        { value: "auther", text: "作者名順" }
+      ];
+
+      sortOptions.forEach(option => {
+        const optionElement = document.createElement("option");
+        optionElement.value = option.value;
+        optionElement.textContent = option.text;
+        dropdownSelect.appendChild(optionElement);
+      });
+    });
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchSelect = document.getElementById("search");
+
+      const searchOptions = [
+        { value: "all", text: "すべて" },
+        { value: "boy", text: "男攻め" },
+        { value: "girl", text: "女攻め" },
+        { value: "both", text: "男女攻め" },
+        { value: "hitomi", text: "hitomi" },
+        { value: "bath", text: "風呂" },
+        { value: "water", text: "プール、海" }
+      ];
+
+      searchOptions.forEach(option => {
+        const optionElement = document.createElement("option");
+        optionElement.value = option.value;
+        optionElement.textContent = option.text;
+        searchSelect.appendChild(optionElement);
+      });
+    });
 
 
     document.addEventListener("DOMContentLoaded", function () {
       const tableElement = document.getElementById("box");
+      const authorSelect = document.getElementById("search");
+      const sortSelect = document.getElementById("dropdown");
+
       const comics = [
 
-        ['おね湯',
-          'https://yasha84.github.io/Hmanga/contents/oneyu',
-          'https://eromanga-sora.com/wp-content/uploads/2020/07/thony_3.jpg',
-          '大空若葉'],
-
-        ['ヨクジョウでHしました',
-          'https://yasha84.github.io/Hmanga/contents/yokujoH',
-          'https://eromanga-sora.com/wp-content/uploads/2017/09/th_004-1.jpg',
-          'あかゐろ'
+        ["おね湯",
+          "https://yasha84.github.io/Hmanga/contents/oneyu",
+          "https://eromanga-sora.com/wp-content/uploads/2020/07/thony_3.jpg",
+          "大空若葉",
+          ["girl", "bath"]
         ],
 
-        ['JS寮',
-          'https://yasha84.github.io/Hmanga/contents/JSryou',
-          'https://eromanga-sora.com/wp-content/uploads/2021/05/21-90.jpg',
-          '国崎蛍'
+        ["ヨクジョウでHしました",
+          "https://yasha84.github.io/Hmanga/contents/yokujoH",
+          "https://eromanga-sora.com/wp-content/uploads/2017/09/th_004-1.jpg",
+          "あかゐろ",
+          ["girl", "bath"]
         ],
 
-        ['おふろせっくす！！',
-          'https://yasha84.github.io/Hmanga/contents/bathsex',
-          'https://eromanga-sora.com/wp-content/uploads/2018/06/tt205_result-721x1024.jpg',
-          '杜山リルカ'
+        ["JS寮",
+          "https://yasha84.github.io/Hmanga/contents/JSryou",
+          "https://eromanga-sora.com/wp-content/uploads/2021/05/21-90.jpg",
+          "国崎蛍",
+          ["girl", "bath"]
+        ],
+
+        ["おふろせっくす！！",
+          "https://yasha84.github.io/Hmanga/contents/bathsex",
+          "https://eromanga-sora.com/wp-content/uploads/2018/06/tt205_result-721x1024.jpg",
+          "杜山リルカ",
+          ["both", "bath"]
 
         ],
 
-        ['クラスメイトとプールで密着エッチ～濡れて擦れて感じちゃうっ',
-          'https://yasha84.github.io/Hmanga/contents/poolH',
-          'https://z2.momon-ga.com/galleries/1832926/1.webp',
-          'しょごた'
+        ["クラスメイトとプールで密着エッチ～濡れて擦れて感じちゃうっ",
+          "https://yasha84.github.io/Hmanga/contents/poolH",
+          "https://z2.momon-ga.com/galleries/1832926/1.webp",
+          "しょごた",
+          ["boy","water"]
         ],
 
-        ['母娘ビッチと初エッチ',
-          'https://yasha84.github.io/Hmanga/contents/motherdaughter',
-          'https://eromanga-sora.com/wp-content/uploads/2018/10/235-1.jpg',
-          '創田ぐみ'
+        ["母娘ビッチと初エッチ",
+          "https://yasha84.github.io/Hmanga/contents/motherdaughter",
+          "https://eromanga-sora.com/wp-content/uploads/2018/10/235-1.jpg",
+          "創田ぐみ",
+          "girl"
         ],
 
-        ['姦交少女',
-          'https://yasha84.github.io/Hmanga/contents/girl',
-          'https://eromanga-sora.com/wp-content/uploads/2018/10/i_125-2.jpg',
-          'あさなつくね'
+        ["姦交少女",
+          "https://yasha84.github.io/Hmanga/contents/girl",
+          "https://eromanga-sora.com/wp-content/uploads/2018/10/i_125-2.jpg",
+          "あさなつくね",
+          ["girl", "bath"]
         ],
 
-        ['きのこぱーてぃ',
-          'https://yasha84.github.io/Hmanga/contents/mushroom',
-          'https://eromanga-sora.com/wp-content/uploads/2018/07/067-1.png',
-          'あかゐろ'
+        ["きのこぱーてぃ",
+          "https://yasha84.github.io/Hmanga/contents/mushroom",
+          "https://eromanga-sora.com/wp-content/uploads/2018/07/067-1.png",
+          "あかゐろ",
+          "girl"
         ],
 
-        ['かんちがいのおべんきょう',
-          'https://yasha84.github.io/Hmanga/contents/JSH',
-          'https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/tSk5oGRIgezGsX9A/00001.jpg',
-          'こびゆうん'
+        ["かんちがいのおべんきょう",
+          "https://yasha84.github.io/Hmanga/contents/JSH",
+          "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/tSk5oGRIgezGsX9A/00001.jpg",
+          "こびゆうん",
+          "boy"
         ],
 
-        ['迷子のお知らせです',
-          'https://yasha84.github.io/Hmanga/contents/maigoH',
-          'https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/20/W085mKPa2hwwzYaC/00001.jpg',
-          '上田裕'
+        ["迷子のお知らせです",
+          "https://yasha84.github.io/Hmanga/contents/maigoH",
+          "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/20/W085mKPa2hwwzYaC/00001.jpg",
+          "上田裕",
+          "boy"
         ],
 
-        ['きなこのキモチ',
-          'https://yasha84.github.io/Hmanga/contents/kinakofeeling',
-          'https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/saE4Qw0H5fRCTYjE/00001.jpg',
-          '???'
+        ["きなこのキモチ",
+          "https://yasha84.github.io/Hmanga/contents/kinakofeeling",
+          "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/saE4Qw0H5fRCTYjE/00001.jpg",
+          "???",
+          ["boy", "bath"]
         ],
 
-        ['生イキ♡女子りりのちゃん',
-          'https://yasha84.github.io/Hmanga/contents/sistersex',
-          'https://eromanga-castle.com/wp-content/uploads/2024/04/drtyrtgdgdfgd-1.webp',
-          'kanju'
+        ["生イキ♡女子りりのちゃん",
+          "https://yasha84.github.io/Hmanga/contents/sistersex",
+          "https://eromanga-castle.com/wp-content/uploads/2024/04/drtyrtgdgdfgd-1.webp",
+          "kanju",
+          "both"
         ],
 
-        ['それでも僕は覗きたい',
-          'https://yasha84.github.io/Hmanga/contents/gatsex',
-          'https://eromanga-sora.com/wp-content/uploads/2020/05/216.png',
-          'あかゐろ'
+        ["それでも僕は覗きたい",
+          "https://yasha84.github.io/Hmanga/contents/gatsex",
+          "https://eromanga-sora.com/wp-content/uploads/2020/05/216.png",
+          "あかゐろ",
+          "girl"
         ],
 
-        ['蜂蜜女学院体験入学！',
-          'https://yasha84.github.io/Hmanga/contents/girlschoolH',
-          'https://eromanga-sora.com/wp-content/uploads/2020/02/023-3.jpg',
-          'ハチゴ'
+        ["蜂蜜女学院体験入学！",
+          "https://yasha84.github.io/Hmanga/contents/girlschoolH",
+          "https://eromanga-sora.com/wp-content/uploads/2020/02/023-3.jpg",
+          "ハチゴ",
+          "both"
         ],
 
-
-        ['競泳先輩に抜いてもらう',
-          'https://yasha84.github.io/Hmanga/contents/sekkyobokki',
-          'https://i0.wp.com/hhmanga.com/wp-content/uploads/2022/09/post_images/223817/2022/09/post223839_9.jpg',
-          'エノキドォ'
+        ["競泳先輩に抜いてもらう",
+          "https://yasha84.github.io/Hmanga/contents/sekkyobokki",
+          "https://i0.wp.com/hhmanga.com/wp-content/uploads/2022/09/post_images/223817/2022/09/post223839_9.jpg",
+          "エノキドォ",
+          ["girl","water"]
         ],
 
-        ['今日、私ん家集合ね！',
-          'https://yasha84.github.io/Hmanga/contents/lessonH',
-          'https://eromanga-sora.com/wp-content/uploads/2018/02/1_004-1.jpg',
-          'メガねぃ'
+        ["今日、私ん家集合ね！",
+          "https://yasha84.github.io/Hmanga/contents/lessonH",
+          "https://eromanga-sora.com/wp-content/uploads/2018/02/1_004-1.jpg",
+          "メガねぃ",
+          "both"
         ],
 
-        ['お姉ちゃんの友達がエッチな人ばかりだから',
-          'https://yasha84.github.io/Hmanga/contents/sisterfriends',
-          'https://res.booklive.jp/101091950/0001/thumbnail/2L.jpg',
-          'ひぐま屋'
+        ["お姉ちゃんの友達がエッチな人ばかりだから",
+          "https://yasha84.github.io/Hmanga/contents/sisterfriends",
+          "https://res.booklive.jp/101091950/0001/thumbnail/2L.jpg",
+          "ひぐま屋",
+          "girl"
         ],
 
-        ['混浴温泉で年上のお姉さんにいっぱい射精させてもらう話',
-          'https://yasha84.github.io/Hmanga/contents/hotspring',
-          'https://res.booklive.jp/101054010/0001/thumbnail/2L.jpg',
-          'ひぐま屋'
+        ["混浴温泉で年上のお姉さんにいっぱい射精させてもらう話",
+          "https://yasha84.github.io/Hmanga/contents/hotspring",
+          "https://res.booklive.jp/101054010/0001/thumbnail/2L.jpg",
+          "ひぐま屋",
+          ["girl", "bath"]
         ],
 
-        ['とある学校の筆下ろし事情',
-          'https://yasha84.github.io/Hmanga/contents/village',
-          'https://m.media-amazon.com/images/I/71e-YHkybML._UF350,350_QL50_.jpg',
-          'ひぐま屋'
+        ["とある学校の筆下ろし事情",
+          "https://yasha84.github.io/Hmanga/contents/village",
+          "https://m.media-amazon.com/images/I/71e-YHkybML._UF350,350_QL50_.jpg",
+          "ひぐま屋",
+          "girl"
         ],
 
-        ['もし海辺でエッチなお姉さんと出会ったら',
-          'https://hitomi.la/reader/2447590.html#1',
-          'https://doujin-assets.dmm.co.jp/digital/comic/d_259735/d_259735pr.jpg',
-          'ひぐま屋'
+        ["もし海辺でエッチなお姉さんと出会ったら",
+          "https://hitomi.la/reader/2447590.html#1",
+          "https://doujin-assets.dmm.co.jp/digital/comic/d_259735/d_259735pr.jpg",
+          "ひぐま屋",
+          ["girl","hitomi","water"]
         ],
 
-        ['おっぱいを触らせてくれる家庭教師のおねえさんの話',
-          'https://yasha84.github.io/Hmanga/contents/hometeacher',
-          'https://res.booklive.jp/101051770/0001/thumbnail/2L.jpg',
-          'ひぐま屋'
+        ["おっぱいを触らせてくれる家庭教師のおねえさんの話",
+          "https://yasha84.github.io/Hmanga/contents/hometeacher",
+          "https://res.booklive.jp/101051770/0001/thumbnail/2L.jpg",
+          "ひぐま屋",
+          "girl"
         ],
 
-        ['プールで出会ったおねえさんとエッチな関係になっちゃうお話',
-          'https://hitomi.la/reader/727324.html#1',
-          'https://img.bookmeter.com/book_image/SL300/86/1414160052593253.jpg',
-          'ひぐま屋'
+        ["プールで出会ったおねえさんとエッチな関係になっちゃうお話",
+          "https://hitomi.la/reader/727324.html#1",
+          "https://img.bookmeter.com/book_image/SL300/86/1414160052593253.jpg",
+          "ひぐま屋",
+          ["girl", "hitomi","water"]
         ],
 
-        ['思春期のお勉強',
-          'https://yasha84.github.io/Hmanga/contents/studyH',
-          'https://eromanga-sora.com/wp-content/uploads/2020/11/07-156.jpg',
-          'メガねぃ'
+        ["思春期のお勉強",
+          "https://yasha84.github.io/Hmanga/contents/studyH",
+          "https://eromanga-sora.com/wp-content/uploads/2020/11/07-156.jpg",
+          "メガねぃ",
+          "both"
         ],
 
-        ['複製マ〇コ',
-          'https://hitomi.la/reader/2719177.html#1',
-          'https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001038912.jpg',
-          'ぽぽちち'
+        ["複製マ〇コ",
+          "https://hitomi.la/reader/2719177.html#1",
+          "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001038912.jpg",
+          "ぽぽちち",
+          ["boy", "hitomi"]
         ],
 
-        ['ギャルメチャシゴキ',
-          'https://hitomi.la/reader/2145092.html#1',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/b104atint01259/b104atint01259pl.jpg',
-          'ぺぺ田デミオ'
+        ["ヤレカ～全国共通♀乗発券～",
+          "https://yasha84.github.io/Hmanga/contents/yareca",
+          "https://eromanga-sora.com/wp-content/uploads/2021/01/01-141-768x1090.jpg",
+          "木の子ゆん",
+          ["boy", "bath"]
         ],
 
-        ['私が全裸になった理由',
-          'https://hitomi.la/reader/2343313.html#1',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/b915awnmg01012/b915awnmg01012pl.jpg',
-          'ぐりえるも'
+        ["委員長のヒミツ ～普段頭が上がらない優等生たちとのエッチな放課後～",
+          "https://yasha84.github.io/Hmanga/contents/iincho",
+          "https://eromanga-sora.com/wp-content/uploads/2023/02/05-143-768x1091.jpg",
+          "はるふえい",
+          "boy"
         ],
 
-        ['姉体験女学寮',
-          'https://hitomi.la/reader/2364260.html#1',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/k568agotp01554/k568agotp01554pl.jpg',
-          'みちきんぐ'
+        ["おとなごっこ",
+          "https://yasha84.github.io/Hmanga/contents/otonagokko",
+          "https://himebon.blog/wp-content/uploads/2023/09/202307050002265-768x1084.jpg",
+          "ぽろん",
+          ["both", "bath"]
         ],
 
-        ['ヤレカ～全国共通♀乗発券～',
-          'https://yasha84.github.io/Hmanga/contents/yareca',
-          'https://eromanga-sora.com/wp-content/uploads/2021/01/01-141-768x1090.jpg',
-          '木の子ゆん'
+        ["闇卓球部",
+          "https://yasha84.github.io/Hmanga/contents/darktabletennis",
+          "https://xn--gmq92kd2rm1kx34a.com/wp/wp-content/uploads/2017/04/mujin0807_0299.jpg",
+          "墓場",
+          "boy"
         ],
 
-        ['委員長のヒミツ ～普段頭が上がらない優等生たちとのエッチな放課後～',
-          'https://yasha84.github.io/Hmanga/contents/iincho',
-          'https://eromanga-sora.com/wp-content/uploads/2023/02/05-143-768x1091.jpg',
-          'はるふえい'
+        ["欲しくて、求めて。",
+          "https://hitomi.la/reader/2737684.html#1",
+          "https://ebookstore.sony.jp/photo/LT00020834/LT000208349002593462_XLARGE.jpg",
+          "きいろいたまご",
+          ["boy", "hitomi"]
         ],
 
-        ['おとなごっこ',
-          'https://yasha84.github.io/Hmanga/contents/otonagokko',
-          'https://himebon.blog/wp-content/uploads/2023/09/202307050002265-768x1084.jpg',
-          'ぽろん'
+        ["干潮の磯の触手さんたちにくすぐられながらお×にーする話",
+          "https://hitomi.la/reader/2675720.html#1",
+          "https://img.dlsite.jp/modpub/images2/work/doujin/RJ01059000/RJ01058900_img_main.jpg",
+          "がりょ～",
+          ["hitomi"]
         ],
 
-        ['闇卓球部',
-          'https://yasha84.github.io/Hmanga/contents/darktabletennis',
-          'https://xn--gmq92kd2rm1kx34a.com/wp/wp-content/uploads/2017/04/mujin0807_0299.jpg',
-          '墓場'
+        ["ずっと離さないでね。-オナホな無感情幼馴染と純愛に堕ちるまで-",
+          "https://yasha84.github.io/Hmanga/contents/mukanjo",
+          "https://t4.qy0.ru/data/t/2460/80/1712215069278.jpg",
+          "クルマヤ公道",
+          "boy"
         ],
 
-        ['欲しくて、求めて。',
-          'https://hitomi.la/reader/2737684.html#1',
-          'https://ebookstore.sony.jp/photo/LT00020834/LT000208349002593462_XLARGE.jpg',
-          'きいろいたまご'
+        ["まれびときたりて",
+          "https://hitomi.la/reader/2473342.html#1",
+          "https://ebook-assets.dmm.co.jp/digital/e-book/k568agotp01870/k568agotp01870pl.jpg",
+          "ヨシカ",
+          ["boy", "hitomi"]
         ],
 
-        ['干潮の磯の触手さんたちにくすぐられながらお×にーする話',
-          'https://hitomi.la/reader/2675720.html#1',
-          'https://img.dlsite.jp/modpub/images2/work/doujin/RJ01059000/RJ01058900_img_main.jpg',
-          'がりょ～'
+        ["思春期と本気セックス",
+          "https://hitomi.la/reader/2870388.html#1",
+          "https://pbs.twimg.com/media/GHdwjpua4AAsbB0.jpg",
+          "わかなはなび",
+          ["boy", "hitomi","water"]
         ],
 
-        ['ずっと離さないでね。-オナホな無感情幼馴染と純愛に堕ちるまで-',
-          'https://yasha84.github.io/Hmanga/contents/mukanjo',
-          'https://t4.qy0.ru/data/t/2460/80/1712215069278.jpg',
-          'クルマヤ公道'
+        ["幼馴染とセックスした翌日",
+          "https://hitomi.la/reader/2811037.html#1",
+          "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001037398.jpg",
+          "わかなはなび",
+          ["boy", "hitomi","water"]
         ],
 
-        ['まれびときたりて',
-          'https://hitomi.la/reader/2473342.html#1',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/k568agotp01870/k568agotp01870pl.jpg',
-          'ヨシカ'
+        ["イヤだと言えない地味系少女と田舎の叔父さん",
+          "https://hitomi.la/reader/2343134.html#1",
+          "https://livedoor.blogimg.jp/z2qdee4ylnia/imgs/8/8/88de30cf.jpg",
+          "F宅",
+          ["boy", "hitomi"]
         ],
 
-        ['思春期と本気セックス',
-          'https://hitomi.la/reader/2870388.html#1',
-          'https://pbs.twimg.com/media/GHdwjpua4AAsbB0.jpg',
-          'わかなはなび'
+        ["イヤだと言えない地味系少女と田舎の叔父さん2",
+          "https://hitomi.la/reader/2700003.html#1",
+          "https://ecdnimg.toranoana.jp/ec/img/04/0031/09/64/040031096489-1p.jpg",
+          "F宅",
+          ["boy", "hitomi","bath"]
         ],
 
-        ['幼馴染とセックスした翌日',
-          'https://hitomi.la/reader/2811037.html#1',
-          'https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001037398.jpg',
-          'わかなはなび'
+        ["イヤだと言えない地味系少女とあかすりエステ",
+          "https://hitomi.la/reader/2139405.html#1",
+          "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=232000000448.jpg",
+          "F宅",
+          ["boy", "hitomi"]
         ],
 
-        ['イヤだと言えない地味系少女と田舎の叔父さん',
-          'https://hitomi.la/reader/2343134.html#1',
-          'https://livedoor.blogimg.jp/z2qdee4ylnia/imgs/8/8/88de30cf.jpg',
-          'F宅'
+        ["イヤだと言えない地味系少女修学旅行総集編",
+          "https://hitomi.la/reader/2126231.html#1",
+          "https://ebook-assets.dmm.co.jp/digital/e-book/b164aisis04639/b164aisis04639pl.jpg",
+          "F宅",
+          ["boy", "hitomi","bath"]
         ],
 
-        ['イヤだと言えない地味系少女と田舎の叔父さん2',
-          'https://hitomi.la/reader/2700003.html#1',
-          'https://ecdnimg.toranoana.jp/ec/img/04/0031/09/64/040031096489-1p.jpg',
-          'F宅'
+        ["イヤだと言えない地味系少女と貸切温泉",
+          "https://hitomi.la/reader/2819368.html#1",
+          "https://bookmate-net.com/up/ec/pkg/lg_43_20240116101523_fe3a52.jpg",
+          "F宅",
+          ["boy", "hitomi", "bath"]
         ],
 
-        ['イヤだと言えない地味系少女とあかすりエステ',
-          'https://hitomi.la/reader/2139405.html#1',
-          'https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=232000000448.jpg',
-          'F宅'
+        ["オナホ教室",
+          "https://hitomi.la/reader/1596502.html#1",
+          "http://img.177picyy.com/uploads/2022/04a/01_00.jpg",
+          "大嘘",
+          ["boy", "hitomi"]
         ],
 
-        ['イヤだと言えない地味系少女修学旅行総集編',
-          'https://hitomi.la/reader/2126231.html#1',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/b164aisis04639/b164aisis04639pl.jpg',
-          'F宅'
+        ["オナホ教室-新学期-",
+          "https://yasha84.github.io/Hmanga/contents/onahoclass2",
+          "https://ebook-assets.dmm.co.jp/digital/e-book/b472abnen01450/b472abnen01450pl.jpg",
+          "大嘘",
+          "boy"
         ],
 
-        ['イヤだと言えない地味系少女と貸切温泉',
-          'https://hitomi.la/reader/2819368.html#1',
-          'https://bookmate-net.com/up/ec/pkg/lg_43_20240116101523_fe3a52.jpg',
-          'F宅'
+        ["こう見えて生えてます。",
+          "https://hitomi.la/reader/2341616.html#1",
+          "https://m.media-amazon.com/images/I/81x0lhSIK5L._SY466_.jpg",
+          "風雲アライだいき",
+          ["girl", "hitomi"]
         ],
 
-        ['オナホ教室',
-          'https://hitomi.la/reader/1596502.html#1',
-          'http://img.177picyy.com/uploads/2022/04a/01_00.jpg',
-          '大嘘'
+        ["お姉さんの膣内に白いおしっこと黄色いおしっこ",
+          "https://yasha84.github.io/Hmanga/contents/whiteyellow",
+          "https://images.asmhentai.com/011/343118/1.jpg",
+          "モザイクブック",
+          "girl"
         ],
 
-        ['オナホ教室-新学期-',
-          'https://yasha84.github.io/Hmanga/contents/onahoclass2',
-          'https://ebook-assets.dmm.co.jp/digital/e-book/b472abnen01450/b472abnen01450pl.jpg',
-          '大嘘'
+        ["【生放送】人気JK配信者の裏の顔【快楽堕ち】",
+          "https://hitomi.la/reader/1830968.html#1",
+          "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=212001269418.jpg",
+          "三崎",
+          ["boy", "hitomi"]
         ],
 
-        ['こう見えて生えてます。',
-          'https://hitomi.la/reader/2341616.html#1',
-          'https://m.media-amazon.com/images/I/81x0lhSIK5L._SY466_.jpg',
-          '風雲"アライだいき"'
+        ["田舎妹と無知の誘惑",
+          "https://hitomi.la/reader/3159133.html#1",
+          "https://doujin-assets.dmm.co.jp/digital/comic/d_491335/d_491335pr.jpg",
+          "みずのウロ",
+          ["boy", "hitomi","bath"]
         ],
 
-        ['お姉さんの膣内に白いおしっこと黄色いおしっこ',
-          'https://yasha84.github.io/Hmanga/contents/whiteyellow',
-          'https://images.asmhentai.com/011/343118/1.jpg',
-          'モザイクブック'
-        ],
-
-        ['【生放送】人気JK配信者の裏の顔【快楽堕ち】',
-          'https://hitomi.la/reader/1830968.html#1',
-          'https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=212001269418.jpg',
-          '三崎'
-        ],
-
-        ['田舎妹と無知の誘惑',
-          'https://hitomi.la/reader/3159133.html#1',
-          'https://doujin-assets.dmm.co.jp/digital/comic/d_491335/d_491335pr.jpg',
-          'みずのウロ'
-        ],
-
-        ['菜穂ちゃんはオナホ屋さん',
-          'https://hitomi.la/reader/2601505.html#1',
-          'https://pics.dmm.co.jp/mono/comic/229book97848626990462023/229book97848626990462023pl.jpg',
-          'かるま龍狼'
+        ["菜穂ちゃんはオナホ屋さん",
+          "https://hitomi.la/reader/2601505.html#1",
+          "https://pics.dmm.co.jp/mono/comic/229book97848626990462023/229book97848626990462023pl.jpg",
+          "かるま龍狼",
+          ["girl", "hitomi"]
         ]
       ];
 
+      let currentFilter = "all";
+      let currentSort = "default";
+
       const callback = function (comics) {
-        const [name, link, image, auther] = comics;
+        const [name, link, image, auther, tag] = comics;
         return `
-         <a href="${link}">
-         <img src="${image}" alt="${name}" /">
-         </a>
+         <a href="${link}"><img src="${image}" alt="${name}" /></a>
                `;
       };
 
-      const render = () => {
-        tableElement.innerHTML = comics.map((comic) => callback(comic)).join("");
+      const getFilteredSortedData = () => {
+        let filtered = currentFilter === "all"
+          ? [...comics]
+          : comics.filter(comic => comic[4].includes(currentFilter));
+
+        if (currentSort === "name") {
+          filtered.sort((a, b) => a[0].localeCompare(b[0], "ja"));
+        } else if (currentSort === "auther") {
+          filtered.sort((a, b) => a[3].localeCompare(b[3], "ja"));
+        }
+
+        return filtered;
       };
 
-      const select = document.getElementById('dropdown');
+      const render = () => {
+        const data = getFilteredSortedData();
+        tableElement.innerHTML = data.map(callback).join("");
+      };
 
-      select.addEventListener('change', () => {
-        const value = select.value;
-
-        if (value === 'default') {
-
-        } else if (value === 'name') {
-          comics.sort((a, b) => a[0].localeCompare(b[0], 'ja'));
-        } else if (value === 'auther') {
-          comics.sort((a, b) => a[3].localeCompare(b[3], 'ja'));
-        }
+      authorSelect.addEventListener("change", () => {
+        currentFilter = authorSelect.value;
         render();
-      })
+      });
+
+      sortSelect.addEventListener("change", () => {
+        currentSort = sortSelect.value;
+        render();
+      });
+
       render();
-      
-    })
+    });
   </script>
 </body>
 
