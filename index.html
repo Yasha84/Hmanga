@@ -62,8 +62,28 @@
       transform: translateY(20%) rotate(-45deg);
     }
 
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      border: none;
+      pointer-events: none;
+    }
+
+    @media (orientation: portrait) {
+      .bg-video {
+        transform: scale(1.3);
+        /* 縦長の余白対策 */
+      }
+    }
   </style>
 </head>
+
+
+<body>
   <a class="pagetop" href="#">
     <div class="pagetop__arrow"></div>
   </a>
@@ -469,9 +489,18 @@
           "https://res.booklive.jp/1433954/001/thumbnail/X.jpg",
           "川崎出版",
           ["boy", "hitomi", "school"]
+        ],
+
+        ["カノジョの発情スイッチ",
+          "https://yasha84.github.io/Hmanga/contents/hatsujoswitch",
+          "https://cdn4.momon-ga.com/galleries/3375956/1.webp",
+          "ベコ太郎",
+          ["boy", "bath"]
         ]
 
       ];
+
+
 
       let currentFilter = "all";
       let currentSort = "default";
