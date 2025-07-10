@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <title>イヤだと言えない地味系少女</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .comics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        img {
+            width: 300px;
+            height: 450px;
+            display: block;
+            object-fit: cover;
+        }
+
+        a {
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .pagetop {
+            height: 125px;
+            width: 125px;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: #fff;
+            border: solid 2px #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .pagetop__arrow {
+            height: 30px;
+            width: 30px;
+            border-top: 3px solid #000;
+            border-right: 3px solid #000;
+            transform: translateY(20%) rotate(-45deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+    <a href="https://yasha84.github.io/Hmanga/">
+        <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box" class="comics"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tableElement = document.getElementById("box");
+
+            const comics = [
+
+                ["イヤだと言えない地味系少女と田舎の叔父さん",
+                    "https://hitomi.la/reader/2343134.html#1",
+                    "https://livedoor.blogimg.jp/z2qdee4ylnia/imgs/8/8/88de30cf.jpg",
+                    "F宅",
+                    ["boy", "hitomi"]
+                ],
+
+                ["イヤだと言えない地味系少女と田舎の叔父さん2",
+                    "https://hitomi.la/reader/2700003.html#1",
+                    "https://ecdnimg.toranoana.jp/ec/img/04/0031/09/64/040031096489-1p.jpg",
+                    "F宅",
+                    ["boy", "hitomi", "bath"]
+                ],
+
+                ["イヤだと言えない地味系少女とあかすりエステ",
+                    "https://hitomi.la/reader/2139405.html#1",
+                    "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=232000000448.jpg",
+                    "F宅",
+                    ["boy", "hitomi"]
+                ],
+
+                ["イヤだと言えない地味系少女修学旅行総集編",
+                    "https://hitomi.la/reader/2126231.html#1",
+                    "https://ebook-assets.dmm.co.jp/digital/e-book/b164aisis04639/b164aisis04639pl.jpg",
+                    "F宅",
+                    ["boy", "hitomi", "bath", "school"]
+                ],
+
+                ["イヤだと言えない地味系少女と貸切温泉",
+                    "https://hitomi.la/reader/2819368.html#1",
+                    "https://bookmate-net.com/up/ec/pkg/lg_43_20240116101523_fe3a52.jpg",
+                    "F宅",
+                    ["boy", "hitomi", "bath"]
+                ]
+
+            ];
+
+            const callback = function ([name, link, image, auther, tag]) {
+                return `
+          <a href="${link}" target="_blank" title="${name}">
+            <img src="${image}" alt="${name}" />
+          </a>
+        `;
+            };
+
+            const render = () => {
+                tableElement.innerHTML = comics.map(callback).join("");
+            };
+
+            render();
+        });
+    </script>
+</body>
+
+</html>

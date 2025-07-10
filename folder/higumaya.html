@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <title>ひぐま屋</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .comics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        img {
+            width: 300px;
+            height: 450px;
+            display: block;
+            object-fit: cover;
+        }
+
+        a {
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .pagetop {
+            height: 125px;
+            width: 125px;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: #fff;
+            border: solid 2px #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .pagetop__arrow {
+            height: 30px;
+            width: 30px;
+            border-top: 3px solid #000;
+            border-right: 3px solid #000;
+            transform: translateY(20%) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+    <a href="https://yasha84.github.io/Hmanga/">
+        <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box" class="comics"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tableElement = document.getElementById("box");
+
+            const comics = [
+
+                ["お姉ちゃんの友達がエッチな人ばかりだから",
+                    "https://yasha84.github.io/Hmanga/contents/sisterfriends",
+                    "https://res.booklive.jp/101091950/0001/thumbnail/2L.jpg",
+                    "ひぐま屋",
+                    "oneshota"
+                ],
+
+                ["混浴温泉で年上のお姉さんにいっぱい射精させてもらう話",
+                    "https://yasha84.github.io/Hmanga/contents/hotspring",
+                    "https://res.booklive.jp/101054010/0001/thumbnail/2L.jpg",
+                    "ひぐま屋",
+                    ["oneshota", "bath"]
+                ],
+
+                ["とある学校の筆下ろし事情",
+                    "https://yasha84.github.io/Hmanga/contents/village",
+                    "https://m.media-amazon.com/images/I/71e-YHkybML._UF350,350_QL50_.jpg",
+                    "ひぐま屋",
+                    ["oneshota", "school"]
+                ],
+
+                ["もし海辺でエッチなお姉さんと出会ったら",
+                    "https://hitomi.la/reader/2447590.html#1",
+                    "https://doujin-assets.dmm.co.jp/digital/comic/d_259735/d_259735pr.jpg",
+                    "ひぐま屋",
+                    ["oneshota", "hitomi", "water"]
+                ],
+
+                ["おっぱいを触らせてくれる家庭教師のおねえさんの話",
+                    "https://yasha84.github.io/Hmanga/contents/hometeacher",
+                    "https://res.booklive.jp/101051770/0001/thumbnail/2L.jpg",
+                    "ひぐま屋",
+                    "oneshota"
+                ],
+
+                ["プールで出会ったおねえさんとエッチな関係になっちゃうお話",
+                    "https://hitomi.la/reader/727324.html#1",
+                    "https://img.bookmeter.com/book_image/SL300/86/1414160052593253.jpg",
+                    "ひぐま屋",
+                    ["oneshota", "hitomi", "water"]
+                ],
+
+                ["義理の姉とすごくなかよしになった話",
+                    "https://hitomi.la/reader/3134844.html#1",
+                    "https://img.dlsite.jp/modpub/images2/work/doujin/RJ01344000/RJ01343788_img_main.webp",
+                    "ひぐま屋",
+                    ["oneshota", "hitomi", "bath"]
+                ],
+
+            ];
+
+            const callback = function ([name, link, image, auther, tag]) {
+                return `
+          <a href="${link}" target="_blank" title="${name}">
+            <img src="${image}" alt="${name}" />
+          </a>
+        `;
+            };
+
+            const render = () => {
+                tableElement.innerHTML = comics.map(callback).join("");
+            };
+
+            render();
+        });
+    </script>
+</body>
+
+</html>
