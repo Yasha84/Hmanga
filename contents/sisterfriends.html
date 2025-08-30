@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <title>お姉ちゃんの友達がエッチな人ばかりだったから</title>
+  <style>
+    body {
+      background-color: pink;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="https://yasha84.github.io/Hmanga/">
+      <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box"></div>
+
+  </div>
+</body>
+
+<script>
+  const box = document.getElementById("box");
+
+  const start = 1;
+  const end = 30;
+
+  const baseURL = "https://cdn-msp.18-comicblade.vip/media/photos/140952/";
+  const suffix = ".webp";
+
+  for (let i = start; i <= end; i++) {
+    const numStr = String(i).padStart(5, '0');
+    const url = `${baseURL}${numStr}${suffix}`;
+
+    const imgHTML = `<img src="${url}">`;
+    box.insertAdjacentHTML("beforeend", imgHTML);
+  }
+</script>
+
+</html>
