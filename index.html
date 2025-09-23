@@ -98,6 +98,29 @@ a {
   text-overflow: ellipsis;
 }
 
+/* ページトップボタン */
+.pagetop {
+  height: 125px;
+  width: 125px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #fff;
+  border: solid 2px #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.pagetop__arrow {
+  height: 30px;
+  width: 30px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: translateY(20%) rotate(-45deg);
+}
 
 /* スマホ対応 */
 @media (max-width: 600px) {
@@ -129,6 +152,10 @@ a {
 </head>
 
 <body>
+  <a class="pagetop" href="#">
+    <div class="pagetop__arrow"></div>
+  </a>
+
   <h1>まとめサイト</h1>
 
   <label for="dropdown">並び替え:</label>
@@ -165,7 +192,7 @@ a {
         { value: "none", text: "hitomi以外" },
         { value: "bath", text: "風呂" },
         { value: "water", text: "プール、海" },
-        { value: "school", text: "学校" }
+        { value: "school", text: "学校" },
       ];
       searchOptions.forEach(option => {
         const optionElement = document.createElement("option");
@@ -449,7 +476,7 @@ a {
 
         ["カノジョの発情スイッチ",
           "https://yasha84.github.io/Hmanga/contents/hatsujoswitch",
-          "https://cdn4.momon-ga.com/galleries/3375956/1.webp",
+          "https://z2.momon-ga.com/galleries/2683739/1.webp",
           "ベコ太郎",
           ["boy", "bath"]
         ],
@@ -471,10 +498,18 @@ a {
 
         [
           "寝てる間体を自由に使わせてくれるクラスメイトの森田さん",
-          "https://hitomi.la/reader/3070402.html#1",
-          "https://m.media-amazon.com/images/I/41HncbJMVaL._SY445_SX342_.jpg",
+          "https://yasha84.github.io/Hmanga/contents/sleepingH",
+          "https://img.momoniji.com/wp-content/uploads/a/43/4387/d_438729/hyoushi.webp",
           "ひやしまくら",
-          ["boy", "hitomi"]
+          ["boy"]
+        ],
+
+        [
+          "オナトモ。 僕の部屋がクラスの女子のオナ部屋になった話。",
+          "https://yasha84.github.io/Hmanga/contents/onatomo",
+          "https://img.momoniji.com/wp-content/uploads/a/54/5463/d_546305/000.webp",
+          "ひやしまくら",
+          ["both", "school"]
         ]
 
       ];
