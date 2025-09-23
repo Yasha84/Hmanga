@@ -26,21 +26,12 @@
 
         <div class="tate">
 
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/1.webp">
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/4.webp">
+            
             <div class="A" id="no1"></div>
 
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/5.webp">
             <div class="A" id="no2"></div>
 
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/6.webp">
             <div class="A" id="no3"></div>
-
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/161.webp">
-            <div class="A" id="no4"></div>
-
-            <img src="https://cdn4.momon-ga.com/galleries/3375956/181.webp">
-            <div class="A" id="no5"></div>
 
         </div>
 </body>
@@ -49,40 +40,28 @@
     const no1 = document.getElementById("no1");
     const no2 = document.getElementById("no2");
     const no3 = document.getElementById("no3");
-    const no4 = document.getElementById("no4");
-    const no5 = document.getElementById("no5");
 
-    const baseURL = "https://cdn4.momon-ga.com/galleries/3375956/";
+    const baseURL1 = "https://z2.momon-ga.com/galleries/2683739/";
+    const baseURL2 = "https://z3.momon-ga.com/galleries/2823074/";
+    const baseURL3 = "https://z2.momon-ga.com/galleries/3055387/";
     const suffix = ".webp";
 
-    for (let i = 11; i <= 52; i++) {
-        const url = `${baseURL}${i}${suffix}`;
+    for (let i = 1; i <= 45; i++) {
+        const url = `${baseURL1}${i}${suffix}`;
         const imgHTML = `<img src="${url}">`;
         no1.insertAdjacentHTML("beforeend", imgHTML);
     }
 
-    for (let i = 55; i <= 98; i++) {
-        const url = `${baseURL}${i}${suffix}`;
+    for (let i = 1; i <= 45; i++) {
+        const url = `${baseURL2}${i}${suffix}`;
         const imgHTML = `<img src="${url}">`;
         no2.insertAdjacentHTML("beforeend", imgHTML);
     }
 
-    for (let i = 99; i <= 158; i++) {
-        const url = `${baseURL}${i}${suffix}`;
+    for (let i = 1; i <= 63; i++) {
+        const url = `${baseURL3}${i}${suffix}`;
         const imgHTML = `<img src="${url}">`;
         no3.insertAdjacentHTML("beforeend", imgHTML);
-    }
-
-    for (let i = 161; i <= 178; i++) {
-        const url = `${baseURL}${i}${suffix}`;
-        const imgHTML = `<img src="${url}">`;
-        no4.insertAdjacentHTML("beforeend", imgHTML);
-    }
-
-    for (let i = 181; i <= 198; i++) {
-        const url = `${baseURL}${i}${suffix}`;
-        const imgHTML = `<img src="${url}">`;
-        no5.insertAdjacentHTML("beforeend", imgHTML);
     }
 </script>
 
