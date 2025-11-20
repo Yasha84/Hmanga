@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <title>複製マ〇コ2 ~真面目なマ〇コ編~</title>
+  <style>
+    body {
+      background-color: pink;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="https://yasha84.github.io/Hmanga/">
+      <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box"></div>
+
+
+  </div>
+</body>
+
+<script>
+  const box = document.getElementById("box");
+
+  const start = 0;
+  const end = 53;
+
+  const baseURL = "https://cdn-doumura.com/2024:12:12:04:42:01/";
+  const suffix = ".webp";
+
+  for (let i = start; i <= end; i++) {
+    const url = `${baseURL}${i}${suffix}`;
+    const imgHTML = `<img src="${url}">`;
+    box.insertAdjacentHTML("beforeend", imgHTML);
+  }
+</script>
+
+</html>
