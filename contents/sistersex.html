@@ -31,7 +31,6 @@
       <h1>トップへ戻る</h1>
     </a>
 
-    <img src="https://eromanga-castle.com/wp-content/uploads/2024/04/drtyrtgdgdfgd-1.webp">
     <div id="box"></div>
   </div>
 </body>
@@ -39,14 +38,16 @@
 <script>
   const box = document.getElementById("box");
 
-  const start = 2;
-  const end = 26;
+  const start = 1;
+  const end = 27;
 
-  const baseURL = "https://eromanga-life.com/wp-content/uploads/2024/05/hfgcv-";
+  const baseURL = "https://pix.678dl.net/20240104/Doujin-20240104136/";
   const suffix = ".webp";
 
   for (let i = start; i <= end; i++) {
-    const url = `${baseURL}${i}${suffix}`;
+    const numStr = String(i).padStart(5, '0');
+    const url = `${baseURL}${numStr}${suffix}`;
+
     const imgHTML = `<img src="${url}">`;
     box.insertAdjacentHTML("beforeend", imgHTML);
   }
