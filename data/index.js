@@ -3,7 +3,7 @@ const comics = [
           "contents/oneyu.html",
           "https://eromanga-sora.com/wp-content/uploads/2020/07/thony_3.jpg",
           "大空若葉",
-          ["oneshota", "bath", "nohitomi"]
+          ["oneshota","JK", "bath", "nohitomi"]
         ],
 
         ["ヨクジョウでHしました",
@@ -17,7 +17,7 @@ const comics = [
           "contents/JSryou.html",
           "https://eromanga-sora.com/wp-content/uploads/2021/05/21-90.jpg",
           "国崎蛍",
-          ["girl", "bath", "school", "nohitomi"]
+          ["girl","JS", "bath", "school", "nohitomi"]
         ],
 
         ["おふろせっくす！！",
@@ -31,7 +31,7 @@ const comics = [
           "contents/poolH.html",
           "https://z2.momon-ga.com/galleries/1832926/1.webp",
           "しょごた",
-          ["boy", "water", "nohitomi"]
+          ["boy","JK", "water", "nohitomi"]
         ],
 
         ["母娘ビッチと初エッチ",
@@ -45,42 +45,42 @@ const comics = [
           "contents/girl.html",
           "https://eromanga-sora.com/wp-content/uploads/2018/10/i_125-2.jpg",
           "あさなつくね",
-          ["girl", "bath", "nohitomi"]
+          ["girl","JK", "bath", "nohitomi"]
         ],
 
         ["きのこぱーてぃ",
           "contents/mushroom.html",
           "https://eromanga-sora.com/wp-content/uploads/2018/07/067-1.png",
           "あかゐろ",
-          ["girl", "nohitomi"]
+          ["girl", "oneshota", "nohitomi"]
         ],
 
         ["かんちがいのおべんきょう",
           "contents/JSH.html",
           "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/tSk5oGRIgezGsX9A/00001.jpg",
           "こびゆうん",
-          ["boy", "nohitomi"]
+          ["boy","JS", "nohitomi"]
         ],
 
         ["迷子のお知らせです",
           "contents/maigoH.html",
           "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/20/W085mKPa2hwwzYaC/00001.jpg",
           "上田裕",
-          ["boy", "nohitomi"]
+          ["boy","JS", "nohitomi"]
         ],
 
         ["ムラムラさせちゃうよっ",
           "contents/JSPE.html",
           "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/AvZJZj5Y5RiF2tg4/00001.jpg",
           "藤坂リリック",
-          ["boy", "school", "nohitomi"]
+          ["boy","JS", "school", "nohitomi"]
         ],
 
         ["きなこのキモチ",
           "contents/kinakofeeling.html",
           "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/07/27/saE4Qw0H5fRCTYjE/00001.jpg",
           "???",
-          ["boy", "bath", "nohitomi"]
+          ["boy","JS", "bath", "nohitomi"]
         ],
 
         ["生イキ♡女子りりのちゃん",
@@ -94,7 +94,7 @@ const comics = [
           "contents/gatsex.html",
           "https://eromanga-sora.com/wp-content/uploads/2020/05/216.png",
           "あかゐろ",
-          ["girl", "school", "nohitomi"]
+          ["girl", "JK", "school", "nohitomi"]
         ],
 
         ["蜂蜜女学院体験入学！",
@@ -115,11 +115,11 @@ const comics = [
           "contents/lessonH.html",
           "https://eromanga-sora.com/wp-content/uploads/2018/02/1_004-1.jpg",
           "メガねぃ",
-          ["both", "school", "nohitomi"]
+          ["both","JS","JC","JK", "school", "nohitomi"]
         ],
 
         ["ひぐま屋",
-          "/folder/higumaya.html",
+          "folder/higumaya.html",
           "https://res.booklive.jp/101091950/0001/thumbnail/2L.jpg",
           "ひぐま屋",
           ["oneshota", "water", "bath", "school", "group", "hitomi", "nohitomi"]
@@ -129,11 +129,11 @@ const comics = [
           "contents/studyH.html",
           "https://eromanga-sora.com/wp-content/uploads/2020/11/07-156.jpg",
           "メガねぃ",
-          ["both", "school", "nohitomi"]
+          ["both", "JK", "school", "nohitomi"]
         ],
 
         ["複製マ〇コ",
-          "/folder/hukuseimanko.html",
+          "folder/hukuseimanko.html",
           "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001038912.jpg",
           "ぽぽちち",
           ["boy", "hitomi", "school", "group"]
@@ -210,7 +210,7 @@ const comics = [
         ],
 
         ["イヤだと言えない地味系少女シリーズ",
-          "/folder/iyadatoienai.html",
+          "folder/iyadatoienai.html",
           "https://livedoor.blogimg.jp/z2qdee4ylnia/imgs/8/8/88de30cf.jpg",
           "F宅",
           ["boy", "hitomi", "bath", "school", "group"]
@@ -280,7 +280,7 @@ const comics = [
         ],
 
         ["性指導員のお仕事",
-          "/folder/seishidou.html",
+          "folder/seishidou.html",
           "https://image.yodobashi.com//product/100/000/086/601/576/265/100000086601576265_10204.jpg",
           "暗中模索",
           ["boy", "school", "hitomi", "group"]
