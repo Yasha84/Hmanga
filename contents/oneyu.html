@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <title>おね湯</title>
+  <style>
+    body {
+      background-color: pink;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="../">
+      <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box"></div>
+
+  </div>
+</body>
+
+<script>
+  const box = document.getElementById("box");
+
+  const start = 1;
+  const end = 15;
+
+  const baseURL = "https://eromanga-sora.com/wp-content/uploads/2020/07/thony_";
+  const suffix = ".jpg";
+
+  for (let i = start; i <= end; i++) {
+    const url = `${baseURL}${i}${suffix}`;
+    const imgHTML = `<img src="${url}">`;
+    box.insertAdjacentHTML("beforeend", imgHTML);
+  }
+</script>
+
+</html>
