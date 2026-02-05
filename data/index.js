@@ -83,6 +83,13 @@ const comics = [
           ["boy","JS", "bath", "nohitomi"]
         ],
 
+        ["透明なちんちん♪",
+          "contents/invisible.html",
+          "https://alaya-travels.ru/german-porno-deutsch/wp-content/uploads/2019/04/16/KMKGeQGTps6RbTAv/00011.jpg",
+          "藤坂リリック",
+          ["boy","JC", "bath", "nohitomi"]
+        ],
+
         ["生イキ♡女子りりのちゃん",
           "contents/sistersex.html",
           "https://eromanga-castle.com/wp-content/uploads/2024/04/drtyrtgdgdfgd-1.webp",
