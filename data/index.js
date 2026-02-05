@@ -136,14 +136,14 @@ const comics = [
           "folder/hukuseimanko.html",
           "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001038912.jpg",
           "ぽぽちち",
-          ["boy", "hitomi", "school", "group"]
+          ["boy","JK", "hitomi", "school", "group"]
         ],
 
         ["ヤレカ～全国共通♀乗発券～",
           "contents/yareca.html",
           "https://eromanga-sora.com/wp-content/uploads/2021/01/01-141-768x1090.jpg",
           "木の子ゆん",
-          ["boy", "bath", "school", "nohitomi"]
+          ["boy", "JD","bath", "school", "nohitomi"]
         ],
 
         ["委員長のヒミツ ～普段頭が上がらない優等生たちとのエッチな放課後～",
@@ -157,7 +157,7 @@ const comics = [
           "contents/otonagokko.html",
           "https://himebon.blog/wp-content/uploads/2023/09/202307050002265-768x1084.jpg",
           "ぽろん",
-          ["both", "bath", "nohitomi"]
+          ["both","JS", "bath", "nohitomi"]
         ],
 
         ["闇卓球部",
@@ -171,7 +171,7 @@ const comics = [
           "https://hitomi.la/reader/2737684.html#1",
           "https://ebookstore.sony.jp/photo/LT00020834/LT000208349002593462_XLARGE.jpg",
           "きいろいたまご",
-          ["boy", "hitomi", "school"]
+          ["boy","JS", "hitomi", "school"]
         ],
 
         ["干潮の磯の触手さんたちにくすぐられながらお×にーする話",
@@ -185,7 +185,7 @@ const comics = [
           "contents/mukanjo.html",
           "https://t4.qy0.ru/data/t/2460/80/1712215069278.jpg",
           "クルマヤ公道",
-          ["boy", "nohitomi"]
+          ["boy","JK","nohitomi"]
         ],
 
         ["まれびときたりて",
@@ -199,42 +199,42 @@ const comics = [
           "https://hitomi.la/reader/2870388.html#1",
           "https://pbs.twimg.com/media/GHdwjpua4AAsbB0.jpg",
           "わかなはなび",
-          ["boy", "hitomi", "water", "school"]
+          ["boy", "JC","hitomi", "water", "school"]
         ],
 
         ["幼馴染とセックスした翌日",
           "https://hitomi.la/reader/2811037.html#1",
           "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=218001037398.jpg",
           "わかなはなび",
-          ["boy", "hitomi", "water", "school"]
+          ["boy","JC", "hitomi", "water", "school"]
         ],
 
         ["イヤだと言えない地味系少女シリーズ",
           "folder/iyadatoienai.html",
           "https://livedoor.blogimg.jp/z2qdee4ylnia/imgs/8/8/88de30cf.jpg",
           "F宅",
-          ["boy", "hitomi", "bath", "school", "group"]
+          ["boy","JK", "hitomi", "bath", "school", "group"]
         ],
 
         ["オナホ教室",
           "https://hitomi.la/reader/1596502.html#1",
           "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=211000104276.jpg",
           "大嘘",
-          ["boy", "hitomi", "school"]
+          ["boy","JK", "hitomi", "school"]
         ],
 
         ["オナホ教室-新学期-",
           "contents/onahoclass2.html",
           "https://ebook-assets.dmm.co.jp/digital/e-book/b472abnen01450/b472abnen01450pl.jpg",
           "大嘘",
-          ["boy", "school", "nohitomi"]
+          ["boy","JK", "school", "nohitomi"]
         ],
 
         ["こう見えて生えてます。",
           "https://hitomi.la/reader/2341616.html#1",
           "https://m.media-amazon.com/images/I/81x0lhSIK5L._SY466_.jpg",
           "風雲アライだいき",
-          ["girl", "hitomi", "school"]
+          ["girl","JK", "hitomi", "school"]
         ],
 
         ["お姉さんの膣内に白いおしっこと黄色いおしっこ",
@@ -248,19 +248,19 @@ const comics = [
           "https://hitomi.la/reader/1830968.html#1",
           "https://melonbooks.akamaized.net/user_data/packages/resize_image.php?image=212001269418.jpg",
           "三崎",
-          ["boy", "hitomi"]
+          ["boy","JK", "hitomi"]
         ],
 
         ["田舎妹と無知の誘惑",
-          "https://hitomi.la/reader/3159133.html#1",
-          "https://doujin-assets.dmm.co.jp/digitalcomic/d_491335/d_491335pr.jpg",
+          "contents/countrysister.html",
+          "https://z2.momon-ga.com/galleries/3159133/1.webp",
           "みずのウロ",
           ["boy", "hitomi", "bath"]
         ],
 
         ["菜穂ちゃんはオナホ屋さん",
           "https://hitomi.la/reader/2601505.html#1",
-          "https://pics.dmm.co.jp/monocomic/229book97848626990462023/229book97848626990462023pl.jpg",
+          "https://ebook-assets.dmm.co.jp/digital/e-book/b915awnmg01982/b915awnmg01982pl.webp",
           "かるま龍狼",
           ["girl", "hitomi"]
         ],
@@ -307,7 +307,7 @@ const comics = [
           "contents/onatomo.html",
           "https://img.momoniji.com/wp-content/uploads/a/54/5463/d_546305/000.webp",
           "ひやしまくら",
-          ["both", "school", "nohitomi"]
+          ["both","JK", "school", "nohitomi"]
         ],
 
         [
