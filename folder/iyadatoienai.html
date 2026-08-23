@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>イヤだと言えない地味系少女</title>
+
+  <!-- css適用 -->
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+</head>
+
+<body>
+
+  <a href="../index.html">
+    <h1>トップへ戻る</h1>
+  </a>
+
+  <label>並び替え:</label>
+  <select id="dropdown"></select>
+
+  <br>
+
+  <button id="toggleTag">タグ検索を開く</button>
+
+  <div id="tagArea">
+    タグ検索(AND)
+    <div class="tag-list" id="tagList"></div>
+  </div>
+
+  <div id="box" class="comics"></div>
+
+  <!-- 1 ページ専用データ -->
+  <script src="../data/folder/iyadatoienai.js"></script>
+
+  <!-- 2 タグ共通 -->
+  <script src="../assets/tags.js"></script>
+
+  <!-- 3 共通ロジック -->
+  <script src="../assets/chooseComic.js"></script>
+
+</body>
+
+</html>

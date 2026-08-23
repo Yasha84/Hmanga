@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <title>おとなごっこ</title>
+  <style>
+    body {
+      background-color: pink;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="../">
+      <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box"></div>
+
+
+  </div>
+</body>
+
+<script>
+  const box = document.getElementById("box");
+
+  const start = 48;
+  const end = 67;
+
+  const baseURL = "https://himebon.blog/wp-content/uploads/2023/09/2023070500022";
+  const suffix = "-768x1084.jpg";
+
+  for (let i = start; i <= end; i++) {
+    const url = `${baseURL}${i}${suffix}`;
+    const imgHTML = `<img src="${url}">`;
+    box.insertAdjacentHTML("beforeend", imgHTML);
+  }
+</script>
+
+</html>
