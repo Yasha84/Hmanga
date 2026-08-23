@@ -50,7 +50,7 @@ const comics = [
   [
     "イヤだと言えない地味系少女と貸切温泉",
     "https://hitomi.la/reader/2819368.html#1",
-    "https://bookmate-net.com/up/ec/pkg/lg_43_20240116101523_fe3a52.jpg",
+    "https://ecdnimg.toranoana.jp/ec/img/04/0031/13/06/040031130643-1p.jpg",
     "F宅",
     ["boy", "hitomi", "bath"],
   ],
