@@ -1,0 +1,57 @@
+body {
+  background-color: pink;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+
+.tate {
+  display: flex;
+  flex-direction: column;
+}
+
+.yoko {
+  display: flex;
+  flex-direction: row;
+}
+
+.yokocontent {
+  width: 50%;
+  height: 50%;
+}
+
+.top {
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.mokuji {
+  font-size: 30px;
+  color: black;
+  display: inline-block;
+  justify-content: center;
+  padding: 5px;
+
+}
+
+.mokujidiv {
+  display: flex;
+  justify-content: center;
+}

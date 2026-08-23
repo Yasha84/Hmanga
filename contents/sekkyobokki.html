@@ -2,54 +2,52 @@
 <html>
 
 <head>
-  <base target="_top">
-  <title>競泳先輩に抜いてもらう</title>
-  <style>
-    body {
-      background-color: pink;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-    }
-
-    a {
-      text-align: center;
-      font-size: 20px;
-      text-decoration: none;
-      color: black;
-    }
-  </style>
+    <base target="_top">
+    <title>競泳先輩に抜いてもらう</title>
+    <link rel="stylesheet" href="/assets/css/pages.css">
 </head>
 
 <body>
-  <div>
-    <a href="../">
-      <h1>トップへ戻る</h1>
-    </a>
+    <div>
+        <a href="../">
+            <h1>トップへ戻る</h1>
+        </a>
 
-    <div id="box"></div>
-
-  </div>
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq107uxqbr.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1p79d03f.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1u7objev.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1e72lglw.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq197f00r0.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1f7ysc0k.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq127hfa8h.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1y7ytdi1.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1o7htnf5.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1g7ubf8k.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1h7fhvwn.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1w7hez9w.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1j7w9kpo.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1l7op9yg.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1m7o00vd.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1d7umx1v.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1z7et2cz.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq117eynup.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1q79l1n0.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq167uyz1b.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1i7uhjp4.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1n72mt29.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1r7fwfda.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1b7y0nrr.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1379b3j5.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq157hp83y.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1x7p2ylk.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq187oog1m.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1t7ucrzx.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1s72aqt3.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq147ymm8r.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1v79cde0.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1c7o9sw9.jpg">
+        <img src="https://cache.niji-gazo.com/image/640/960/tbq1a7yk9dj.jpg">
+    </div>
 </body>
-
-<script>
-  const box = document.getElementById("box");
-
-  const start = 1;
-  const end = 34;
-
-  const baseURL = "https://i0.wp.com/hhmanga.com/wp-content/uploads/2022/09/post_images/223817/2022/09/post223839_";
-  const suffix = ".jpg";
-
-  for (let i = start; i <= end; i++) {
-    const url = `${baseURL}${i}${suffix}`;
-    const imgHTML = `<img src="${url}">`;
-    box.insertAdjacentHTML("beforeend", imgHTML);
-  }
-</script>
 
 </html>

@@ -3,45 +3,14 @@
 
 <head>
   <base target="_top">
-  <title>オナトモ。 僕の部屋がクラスの女子のオナ部屋になった話。</title>
-  <style>
-    body {
-      background-color: pink;
-      margin: 0px;
-      padding: 0px;
-    }
 
-    .A {
-      display: flex;
-      flex-direction: column;
-    }
+  <title id="pageTitle"></title>
 
-    .top {
-      text-align: center;
-      font-size: 20px;
-      text-decoration: none;
-      color: black;
-    }
-
-
-    .mokuji {
-      font-size: 30px;
-      color: black;
-      display: inline-block;
-      justify-content: center;
-      padding: 5px;
-
-    }
-
-    .mokujidiv {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
-</head>
+  <!-- css適用 -->
+  <link rel="stylesheet" href="/assets/css/pages.css">
 
 <body>
-  <div class="A">
+  <div>
     <a class="top" href="../">
       <h1>トップへ戻る</h1>
     </a>
@@ -53,17 +22,22 @@
     </div>
 
 
-    <div class="A" id="no1"></div>
-    <div class="A" id="no2"></div>
-    <div class="A" id="no3"></div>
+    <div id="no1"></div>
+    <div id="no2"></div>
+    <div id="no3"></div>
 
   </div>
 </body>
 
 <script>
-  const no1 = document.getElementById("no1");
-  const no2 = document.getElementById("no2");
-  const no3 = document.getElementById("no3");
+  const title = "オナトモ。 僕の部屋がクラスの女子のオナ部屋になった話。";
+
+  const start1 = 0;
+  const end1 = 59;
+  const start2 = 0;
+  const end2 = 69;
+  const start3 = 0;
+  const end3 = 69;
 
   // 共通のURL部分
   const baseURL1 = "https://img.momoniji.com/wp-content/uploads/a/54/5463/d_546305/";
@@ -71,7 +45,11 @@
   const baseURL3 = "https://img.momoniji.com/wp-content/uploads/a/58/5834/d_583427/";
   const suffix = ".webp";
 
-  for (let i = 0; i <= 59; i++) {
+  const no1 = document.getElementById("no1");
+  const no2 = document.getElementById("no2");
+  const no3 = document.getElementById("no3");
+
+  for (let i = start1; i <= end1; i++) {
     const numStr = String(i).padStart(3, '0');
     const url = `${baseURL1}${numStr}${suffix}`;
 
@@ -79,7 +57,7 @@
     no1.insertAdjacentHTML("beforeend", imgHTML);
   }
 
-  for (let i = 0; i <= 69; i++) {
+  for (let i = start2; i <= end2; i++) {
     const numStr = String(i).padStart(3, '0');
     const url = `${baseURL2}${numStr}${suffix}`;
 
@@ -87,7 +65,7 @@
     no2.insertAdjacentHTML("beforeend", imgHTML);
   }
 
-  for (let i = 0; i <= 69; i++) {
+  for (let i = start3; i <= end3; i++) {
     const numStr = String(i).padStart(3, '0');
     const url = `${baseURL3}${numStr}${suffix}`;
 

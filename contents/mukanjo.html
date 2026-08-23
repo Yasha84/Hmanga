@@ -3,45 +3,13 @@
 
 <head>
   <base target="_top">
-  <title>ずっと離さないでね。オナホな無感情幼馴染と純愛に堕ちるまで</title>
-  <style>
-    body {
-      background-color: pink;
-      margin: 0px;
-      padding: 0px;
-    }
-
-    .A {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .top {
-      text-align: center;
-      font-size: 20px;
-      text-decoration: none;
-      color: black;
-    }
-
-
-    .mokuji {
-      font-size: 30px;
-      color: black;
-      display: inline-block;
-      justify-content: center;
-      padding: 5px;
-
-    }
-
-    .mokujidiv {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+  <title id="pageTitle"></title>
+  <!-- css適用 -->
+  <link rel="stylesheet" href="/assets/css/pages.css">
 </head>
 
 <body>
-  <div class="A">
+  <div>
     <a class="top" href="../">
       <h1>トップへ戻る</h1>
     </a>
@@ -51,20 +19,28 @@
       <a class="mokuji" href="#no2">第2話</a>
     </div>
 
-    <div class="A" id="no1"></div>
-    <div class="A" id="no2"></div>
+    <div id="no1"></div>
+    <div id="no2"></div>
   </div>
 </body>
 
 <script>
-  const no1 = document.getElementById("no1");
-  const no2 = document.getElementById("no2");
+  const title = "ずっと離さないでね。オナホな無感情幼馴染と純愛に堕ちるまで";
+  
 
   const baseURL = "https://img5.qy0.ru/data/2460/80/";
   const baseURL2 = "https://i2.nhentaimg.com/015/t0dicfn397/";
   const suffix = ".jpg";
 
-  for (let i = 1; i <= 62; i++) {
+  const start1 = 1;
+  const end1 = 62;
+  const start2 = 1;
+  const end2 = 69;
+
+  const no1 = document.getElementById("no1");
+  const no2 = document.getElementById("no2");
+
+  for (let i = start1; i <= end1; i++) {
     const numStr = String(i).padStart(2, '0');
     const url = `${baseURL}${numStr}${suffix}`;
 
@@ -72,7 +48,7 @@
     no1.insertAdjacentHTML("beforeend", imgHTML);
   }
 
-  for (let i = 1; i <= 69; i++) {
+  for (let i = start2; i <= end2; i++) {
     const url = `${baseURL2}${i}${suffix}`;
     const imgHTML = `<img src="${url}">`;
     no2.insertAdjacentHTML("beforeend", imgHTML);

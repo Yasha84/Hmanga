@@ -49,7 +49,7 @@ const comics = [
 
   [
     "姦交少女",
-    "contents/girl.html",
+    "contents/travelingGirl.html",
     "https://eromanga-sora.com/wp-content/uploads/2018/10/i_125-2.jpg",
     "あさなつくね",
     ["girl", "JK", "bath", "nohitomi"],
@@ -106,7 +106,7 @@ const comics = [
   [
     "生イキ♡女子りりのちゃん",
     "contents/sistersex.html",
-    "https://eromanga-castle.com/wp-content/uploads/2024/04/drtyrtgdgdfgd-1.webp",
+    "https://pix.678dl.net/20240104/Doujin-20240104136/00001.webp",
     "kanju",
     ["both", "nohitomi"],
   ],
@@ -130,7 +130,7 @@ const comics = [
   [
     "競泳先輩に抜いてもらう",
     "contents/sekkyobokki.html",
-    "https://i0.wp.com/hhmanga.com/wp-content/uploads/2022/09/post_images/223817/2022/09/post223839_9.jpg",
+    "https://cache.niji-gazo.com/image/640/960/tbq107uxqbr.jpg",
     "エノキドォ",
     ["girl", "water", "school", "nohitomi"],
   ],
@@ -390,4 +390,14 @@ const comics = [
     "八代涼",
     ["both","nohitomi"],
   ],
+
+  [
+    "2年C組学園おっぱぶのキャストに妹がいた",
+    "contents/2cOppabuSister.html",
+    "https://i5.nhentaimg.com/017/vr86tfzsuw/1.webp",
+    "ぶなぴー397円",
+    ["JK","boy","school","nohitomi"],
+  ],
 ];
+
+

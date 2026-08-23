@@ -1,4 +1,5 @@
 const tags = [
+  { value: "group", text: "グループ" },
   { value: "boy", text: "男攻め" },
   { value: "girl", text: "女攻め" },
   { value: "both", text: "男女攻め" },
