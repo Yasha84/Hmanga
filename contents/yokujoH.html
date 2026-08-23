@@ -3,26 +3,11 @@
 
 <head>
   <base target="_top">
-  <title>ヨクジョウでHしました</title>
-  <style>
-    body {
-      background-color: pink;
-      margin: 0px;
-      padding: 0px;
-    }
 
-    a {
-      text-align: center;
-      font-size: 20px;
-      text-decoration: none;
-      color: black;
-    }
+  <title id="pageTitle"></title>
 
-    div {
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
+  <!-- css適用 -->
+  <link rel="stylesheet" href="/assets/css/pages.css">
 </head>
 
 <body>
@@ -38,16 +23,25 @@
 </body>
 
 <script>
-  const no1 = document.getElementById("no1");
-  const no2 = document.getElementById("no2");
+  const title = "ヨクジョウでHしました";
+
+  const start1 = 1;
+  const end1 = 16;
+  const start2 = 17;
+  const end2 = 20
 
   const baseURL1 = "https://eromanga-sora.com/wp-content/uploads/2017/09/th_";
   const baseURL2 = "https://eromanga-sora.com/wp-content/uploads/2017/09/th_";
   const suffix1 = "-1.jpg";
   const suffix2 = ".jpg";
+  const zeroNum1 = 3;
+  const zeroNum2 = 3;
+
+  const no1 = document.getElementById("no1");
+  const no2 = document.getElementById("no2");
 
   for (let i = 1; i <= 16; i++) {
-    const numStr = String(i).padStart(3, '0');
+    const numStr = String(i).padStart(zeroNum1, '0');
     const url = `${baseURL1}${numStr}${suffix1}`;
 
     const imgHTML = `<img src="${url}">`;
@@ -55,7 +49,7 @@
   }
 
   for (let i = 17; i <= 20; i++) {
-    const numStr = String(i).padStart(3, '0');
+    const numStr = String(i).padStart(zeroNum2, '0');
     const url = `${baseURL2}${numStr}${suffix2}`;
 
     const imgHTML = `<img src="${url}">`;
