@@ -398,6 +398,14 @@ const comics = [
     "ぶなぴー397円",
     ["JK","boy","school","nohitomi"],
   ],
+
+  [
+    "日曜日の秘事",
+    "contents/motherComplex.html",
+    "https://eromanga-sora.com/wp-content/uploads/2021/07/01-25.jpg",
+    "みたらし候成",
+    ["boy","nohitomi"],
+  ],
 ];
 
 
