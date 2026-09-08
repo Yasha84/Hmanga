@@ -398,6 +398,21 @@ const comics = [
     "ぶなぴー397円",
     ["JK","boy","school","nohitomi"],
   ],
+
+  [
+    "日曜日の秘事",
+    "contents/motherComplex.html",
+    "https://eromanga-sora.com/wp-content/uploads/2021/07/01-25.jpg",
+    "みたらし候成",
+    ["boy","nohitomi"],
+  ],
+  [
+    "催眠!! 元カノ無知無知大作戦",
+    "contents/saimin.html",
+    "https://z2.momon-ga.com/galleries/2902509/1.webp",
+    "	いだ天ふにすけ",
+    ["boy","nohitomi"],
+  ],
 ];
 
 
