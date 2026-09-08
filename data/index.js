@@ -406,6 +406,13 @@ const comics = [
     "みたらし候成",
     ["boy","nohitomi"],
   ],
+  [
+    "催眠!! 元カノ無知無知大作戦",
+    "contents/saimin.html",
+    "https://z2.momon-ga.com/galleries/2902509/1.webp",
+    "	いだ天ふにすけ",
+    ["boy","nohitomi"],
+  ],
 ];
 
 

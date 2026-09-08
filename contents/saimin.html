@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <base target="_top">
+
+  <title id="pageTitle"></title>
+
+  <!-- css適用 -->
+  <link rel="stylesheet" href="/assets/css/pages.css">
+
+</head>
+
+<body>
+  <div>
+    <a href="../">
+      <h1>トップへ戻る</h1>
+    </a>
+
+    <div id="box"></div>
+
+  </div>
+</body>
+
+<script>
+  // ========================================
+ 
+  const title = "催眠!! 元カノ無知無知大作戦";
+
+  const start = 1;
+  const end = 114;
+
+  const baseURL = "https://z2.momon-ga.com/galleries/2902509/";
+  const suffix = ".webp";
+
+  // ========================================
+
+  document.getElementById("pageTitle").textContent = title;
+
+  const box = document.getElementById("box");
+
+  for (let i = start; i <= end; i++) {
+    const url = `${baseURL}${i}${suffix}`;
+    const imgHTML = `<img src="${url}">`;
+
+    box.insertAdjacentHTML("beforeend", imgHTML);
+  }
+</script>
+
+</html>
